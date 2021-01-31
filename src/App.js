@@ -1,33 +1,17 @@
-import {ThemeProvider, createMuiTheme} from '@material-ui/core/styles';
-import {orange, green} from '@material-ui/core/colors';
-
 import './App.css';
 import NavBar from './NavBar/NavBar'
 import FixedBar from './Footer/FixedBar'
+import Section1 from './body/Section1'
+import Section2 from './body/Section2'
 
 function App() {
-  const theme = createMuiTheme({
-    overrides: {
-      MuiCssBaseline: {
-        '@global': {
-          html: {
-            WebkitFontSmoothing: 'auto',
-          },
-        },
-      },
-    },
-    palette : {
-      primary : {
-          main : '#500ad2'
-      }
-    }
-  });
-  return (
+
+   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
         <NavBar />
+        <Section1 />
+        <Section2 />
         <FixedBar />
-      </ThemeProvider>
     </div>
   );
 }

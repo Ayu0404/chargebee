@@ -10,8 +10,9 @@ const NavBar = () => {
     const navBarDiv = makeStyles({
         root : {
             'display' : 'flex',
-            'justify-content' : 'space-around',
-            'align-items' : 'flex-start'
+            'justify-content' : 'space-between',
+            'align-items' : 'flex-start',
+            'minHeight' : '10vh'
         }
     });
     const useNavBar = navBarDiv();
@@ -26,7 +27,6 @@ const NavBar = () => {
     return(
         <div className={useNavBar.root}>
             <h1 className={useChargebee.root}>Chargebee</h1>
-            
             <Buttons />
         </div>
     );
@@ -46,7 +46,10 @@ const Buttons = () => {
             'backgroundColor' : '#ff5722',
             'color' : 'white',
             'border' : 'none',
-            'borderRadius' : '5px'
+            'borderRadius' : '5px',
+            '&:hover' : {
+                'backgroundColor' : '#ff5722'
+            }
         }
     });
     const demoButtonUseStyles = demoButton(); 
